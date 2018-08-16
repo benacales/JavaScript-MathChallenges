@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "combine 2 arrays" content = "takes two arrays an makes the one";>
+    <title> Sum with an array </title>
+</head>
+<body>
+    <span> <button type="button" onclick="clicked()">Begin</button> </span>
+    <script>
+    function clicked() {
+    var array1 = [1, 2, 3];
+    var array2 = ['a', 'b', 'c'];
+    var array3 = [];
+    var array1Length = array1.length;
+    var array2Length = array2.length; 
+    var totalLength = array1Length + array2Length;
+        for (var i = 0 ; i < array1Length ; i++) {
+            array3 [i] = array1 [i];
+        }
+        for (var i = 0 ; i < array2Length ; i++) {
+            var j = (array1Length + i);
+            array3 [j] = array2 [i];
+        }
+        for (var i = 0 ; i < totalLength ; i++) { 
+            console.log (array3[i]);
+        }
+    }
+    </script>
+</body>
+</html>

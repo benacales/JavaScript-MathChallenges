@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Alternating Combine Arrays" content = "takes two arrays and combines them by alternating them";>
+    <title> Alternating Combine Arrays </title>
+</head>
+<body>
+    <span> <button type="button" onclick="clicked()">Begin</button> </span>
+    <script>
+    function clicked() {
+    var array1 = [1, 2, 3];
+    var array2 = ['a', 'b', 'c'];
+    var array3 = [];
+    var array1Length = array1.length;
+    var array2Length = array2.length; 
+    var totalLength = array1Length + array2Length;
+    var j;
+        for (var i = 0 , j = 0 ; i < totalLength ; i++, j++) {
+            array3 [j] = array1 [i];
+            j++;
+            array3 [j] = array2 [i];
+        }
+        for (var i = 0 ; i < totalLength ; i++) { 
+            console.log (array3[i]);
+        }
+    }
+    </script>   
+</body>
+</html>

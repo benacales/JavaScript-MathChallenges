@@ -1,0 +1,63 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Determines if a word is a Palindrome" content = "takes a word a determines if it is a Palindrome";>
+    <title> Palindrome </title>
+</head>
+<body>
+
+<input type="text" id="input1" placeholder="Enter a Number">
+<input type="text" id="input2" placeholder="Enter a Number">
+<input type="text" id="input3" placeholder="Enter a Number">
+<input type="text" id="input4" placeholder="Enter a Number">
+<input type="text" id="input5" placeholder="Enter a Number">
+<span> <button type="button" onclick="clicked()">Input Into The Array</button> </span>
+<div id = "displayFinalAnswer"></div>
+<script>
+    function clicked() {
+        
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+        var num3 = document.getElementById("input3").value;
+        var num4 = document.getElementById("input4").value;
+        var num5 = document.getElementById("input5").value;
+        var array = [num1, num2, num3, num4, num5]
+        
+        function isSorted (array){
+            var counter = 0;
+            if (array[0] < array[1]){    
+                for (var i = 0 ; i <= 3 ; i++){
+                    if (array[i] <= array[i + 1]) {
+                        counter = counter + 0;
+                    }
+                    else {
+                        counter = counter + 1;
+                    }
+                }
+            }
+            else {
+                for (var i = 0 ; i <= 3 ; i++){
+                    if (array[i] >= array[i + 1]) {
+                        counter = counter + 0;
+                    }
+                    else {
+                        counter = counter + 1;
+                    }
+                }
+            }
+            return counter === 0
+        }
+
+        var arrayIsSorted = isSorted(array)
+        if (arrayIsSorted) {
+            document.getElementById("displayFinalAnswer").innerHTML = "All is in order";
+        }
+        else {
+            document.getElementById("displayFinalAnswer").innerHTML = "These values are not in order";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Determines if a word is a Palindrome" content = "takes a word a determines if it is a Palindrome";>
+    <title> Palindrome </title>
+</head>
+<body>
+<input type="text" id="myInput" placeholder="Enter a Word">
+<span> <button type="button" onclick="clicked()">Begin</button> </span>
+<div id = "displayFinalAnswer"></div>
+<script>
+    function clicked() {
+        var word = document.getElementById("myInput").value;
+        var drow = word.split("").reverse().join("");
+        var length = word.length;
+        var wordForward = [];
+        var wordBackward = [];
+        var answer = [];
+        var finalAnswer = 0;
+        for (var i = 0 ; i <= length ; i++){
+            wordForward [i] = word.charAt("i");
+        }
+        for (var i = (length - 1) ; i >= 0 ; i--){
+            wordBackward [i] = drow.charAt("i");
+        }
+        for (var i = 0 ; i < length ; i ++) {
+            if (wordForward[i] === wordBackward[i]){
+                answer[i] = 0;
+            }
+            else {
+                answer[i] = 1;
+            }
+            finalAnswer += answer[i];
+        }
+        if (length === 1) {
+            document.getElementById("displayFinalAnswer").innerHTML = ("It's only one letter so that kinda cheating...");
+        }
+        else if (finalAnswer === 0) {
+        document.getElementById("displayFinalAnswer").innerHTML = "True";
+        }
+        else {
+            document.getElementById("displayFinalAnswer").innerHTML = "False";
+        }
+    }
+</script>
+</body>
+</html>

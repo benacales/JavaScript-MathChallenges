@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Find the Sum" content = "takes a number and finds the sum of all the numbers between 1 and that number";>
+    <title> Sums </title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter a Numerical Value">
+    <span> <button type="button" onclick="clicked()">Begin</button> </span>
+    <script>
+    function clicked() {
+        var total = 0
+        var endingNum = document.getElementById("myInput").value;
+        if (endingNum >= 1)
+            for (var i = 1 ; i <= endingNum ; i++) {
+                total = (total + i);
+            }
+        else {
+            console.log ("The number needs to be greater then or equal to one cause I ain't dealing with that")
+        }
+    console.log (total);
+    }
+    </script>
+</body>
+</html>

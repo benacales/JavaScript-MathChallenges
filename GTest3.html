@@ -1,0 +1,25 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Find the nth term of the fibonachi sequence" content = "takes a number finds that nerms place in the fibonachi sequence.";>
+    <title> Fibonachi </title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter a Numerical Value">
+    <span> <button type="button" onclick="clicked()">Begin</button> </span>
+    <script>
+    function clicked() {
+        var fibbArray = [0,1];
+        var endingNum = document.getElementById("myInput").value;
+        for (var i = 2 ; i <=  endingNum ; i++) {
+            fibbArray [i] = (fibbArray [i - 1]) + (fibbArray [i-2]);
+        }   
+        for (var i = 0 ; i <= endingNum ; i ++) {
+            console.log (fibbArray[i]);
+        }
+    }
+    </script>
+</body>
+</html>

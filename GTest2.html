@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+<html lang = "en">
+    <head>
+    <meta charset = "utf-8";>
+    <meta name = "Find the Sum but using an Array" content = "takes a number and finds the sum of all the numbers between 1 and that number using an array";>
+    <title> Sum with an array </title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter a Numerical Value">
+    <span> <button type="button" onclick="clicked()">Begin</button> </span>
+    <script>
+    function clicked() {
+        var total = 0
+        var runningTotal = [];
+        var endingNum = document.getElementById("myInput").value;
+        if (endingNum >= 1)
+            for (var i = 1 ; i <= endingNum ; i++) {
+                total = (total + i);
+                runningTotal [i] = total;
+            }   
+        else {
+            console.log ("The number needs to be greater then or equal to one cause I ain't dealing with that")
+        }
+        for (var i = 1 ; i <= endingNum ; i ++) {
+            console.log (runningTotal[i]);
+        }
+    }
+    </script>
+</body>
+</html>
